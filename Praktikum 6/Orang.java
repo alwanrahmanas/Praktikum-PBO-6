@@ -22,6 +22,8 @@ public abstract class Orang{
 
         this.nama = nama;
     }
+    
+    //masih on progress
 
     /* public String getTiga(int depan, int belakang){
 
