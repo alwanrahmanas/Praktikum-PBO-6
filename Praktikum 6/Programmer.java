@@ -44,8 +44,24 @@ public class Programmer extends Pegawai{
 
     public String getTanggalLahir(){
     
+        try{
+            SimpleDateFormat sdf = new SimpleDateFormat("yyyy MMM dd");
+            validateTanggalLahir();
+        
+            return sdf.format(tanggalLahir.getTime()).toString();
+        }catch (Exception e){
+            return "Belum tersedia ";
+        }finally{System.out.println("Error Tertangani");} 
+        //return sdf.format(tanggalLahir.getTime()).toString(); 
+        }
     
-        SimpleDateFormat sdf = new SimpleDateFormat("yyyy MM dd");
-        return sdf.format(tanggalLahir.getTime()).toString();
-    }
+        void validateTanggalLahir() throws Exception{
+        
+            if(tanggalLahir.get(Calendar.YEAR)<2000){
+                throw new Exception("Di bawah umur");
+            }
+            else{
+                System.out.println("Cukup umur");
+            }
+        }
 }
