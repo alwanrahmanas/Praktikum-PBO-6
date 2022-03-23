@@ -3,7 +3,7 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.GregorianCalendar;
 
-class Pegawai extends Orang implements Dosen{  //ini tadinya saya kasih public bu 
+class Pegawai extends Orang implements Dosen{  
 
     public String NIP;
     public String kantor;
@@ -29,7 +29,6 @@ class Pegawai extends Orang implements Dosen{  //ini tadinya saya kasih public b
        
     super(nama);
     this.nama = nama;
-    //this.tanggalLahir = tanggalLahir;
     this.NIP = NIP;
     this.kantor = namaKantor;
     this.unitKerja = unitKerja;
@@ -54,7 +53,7 @@ class Pegawai extends Orang implements Dosen{  //ini tadinya saya kasih public b
 
     return this.NIDN;
    }
-   //public String setNIDN(String NIDN);
+  
    public String getKeahlian(){
        return this.Keahlian;
    }
@@ -90,7 +89,6 @@ class Pegawai extends Orang implements Dosen{  //ini tadinya saya kasih public b
     }catch (Exception e){
         return "Belum tersedia ";
     }finally{System.out.println("Error Tertangani");}
-    //return sdf.format(tanggalLahir.getTime()).toString(); 
     }
 
     void validateTanggalLahir() throws Exception{
